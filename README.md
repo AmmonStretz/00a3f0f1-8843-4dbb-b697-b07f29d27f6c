@@ -2,6 +2,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.3.
 
+## Steps to install project
+
+my nodeJS version: min v18.16.0
+my npm version: min 9.5.1
+Run `npm install -g @angular/cli` for installing newest CLI version
+Run `npm install` inside the project root folder
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
