@@ -1,0 +1,23 @@
+<nav>
+  <a routerLink="/" class="logo" (click)="clearFilterText()">Eventlist</a>
+  <label class="searchbar">
+    <input
+      [(ngModel)]="filterText"
+      (ngModelChange)="onFilterTextChange()"
+      placeholder="Search..."
+    />
+    <button (click)="clearFilterText()">
+      <span class="icon-clear"></span>
+    </button>
+  </label>
+  <a
+    routerLink="/cart-summary"
+    class="shopping_cart"
+    (click)="clearFilterText()"
+  >
+    <span class="icon-shopping_cart"></span>
+    <span *ngIf="numberOfSelected" class="number-of-selected">{{
+      numberOfSelected
+    }}</span>
+  </a>
+</nav>

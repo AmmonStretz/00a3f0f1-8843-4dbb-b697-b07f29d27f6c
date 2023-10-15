@@ -1,0 +1,13 @@
+<h1>Selected Events</h1>
+<div class="card-list">
+  <app-event-card
+      *ngFor="let event of eventService.selectedEvents"
+      [event]="event"
+      [isFavorite]="true"
+    ></app-event-card>
+</div>
+<div class="empty-list" *ngIf="!eventService.selectedEvents.length">
+  <p>
+    No events selected!
+  </p>
+</div>

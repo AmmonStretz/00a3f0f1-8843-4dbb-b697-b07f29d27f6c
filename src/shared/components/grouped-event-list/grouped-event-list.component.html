@@ -1,0 +1,13 @@
+<h1>Public Events</h1>
+<div
+  class="event-group"
+  *ngFor="let eventGroupKey of eventService.groupedEvents | keyvalue"
+>
+  <h2>{{ eventGroupKey.key | date : "dd.MM.yyyy" }}</h2>
+  <div class="card-list">
+    <app-event-card
+      *ngFor="let event of eventGroupKey.value"
+      [event]="event"
+    ></app-event-card>
+  </div>
+</div>

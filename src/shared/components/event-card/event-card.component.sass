@@ -1,0 +1,55 @@
+:host
+  display: block
+  width: 300px
+  position: relative
+  box-shadow: 0 4px 3px 0 #0000002b
+  transition: 200ms box-shadow ease, 200ms transform ease
+  overflow: hidden
+  border-radius: 4px
+  &:hover
+    box-shadow: 0 8px 12px 0 #0000002b
+    transform: translateY(-6px)
+
+  div
+    img
+      width: 100%
+      aspect-ratio: 1
+      object-fit: cover
+      object-position: top center
+      background: var(--dark-blue)
+    .event-info
+      padding: 8px
+      .event-title
+        font-weight: bold
+      .event-datetime
+        p
+          font-size: 12px
+          margin-block: 8px
+          color: var(--blue)
+    nav
+      position: absolute
+      top: 4px
+      right: 4px
+      display: flex
+      flex-direction: column
+      gap: 4px
+      button, a
+        text-decoration: none
+        color: var(--blue)
+        border: none
+        display: flex
+        font-size: 24px
+        width: 44px
+        height: 44px
+        border-radius: 50%
+        cursor: pointer
+        background-color: var(--white)
+        outline: 1px #0003 solid
+        align-items: center
+        justify-content: center
+        transition: 300ms ease color, 300ms ease background-color
+        &:hover
+          color: var(--dark-blue)
+          background-color: var(--light-grey)
+        span
+          margin-top: -1px

@@ -1,0 +1,26 @@
+<div>
+  <img [src]="event.flyerFront" />
+  <div class="event-info">
+    <div class="event-title">{{ event.title }}</div>
+    <div class="event-datetime" *ngIf="event.startTime || event.endTime">
+      <p *ngIf="event.startTime">
+        Start: <time>{{ event.startTime | date : "dd.MM.yyyy hh:mm" }}Uhr</time>
+      </p>
+      <p *ngIf="event.endTime">
+        End: <time>{{ event.endTime | date : "dd.MM.yyyy hh:mm" }}Uhr</time>
+      </p>
+    </div>
+  </div>
+
+  <nav>
+    <button (click)="select()" *ngIf="!isFavorite">
+      <span class="icon-add"></span>
+    </button>
+    <button (click)="deselect()" *ngIf="isFavorite">
+      <span class="icon-clear"></span>
+    </button>
+    <a [href]="event.venue.direction" target="_blank">
+      <span class="icon-location_pin"></span>
+    </a>
+  </nav>
+</div>
